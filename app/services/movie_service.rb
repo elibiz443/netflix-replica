@@ -11,6 +11,6 @@ class MovieService
     response = @conn.get do |req|
       req.url "/api/v1/movies"
     end
-    JSON.parse(response.body)["movies"]
+    JSON.parse(response.body)["movie"]
   end
 end
