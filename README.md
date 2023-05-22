@@ -12,3 +12,8 @@ rails g controller home index
 ```
 bin/dev
 ```
+
+# Pushing master key to heroku
+```
+heroku config:set RAILS_MASTER_KEY=`cat config/master.key`
+```
