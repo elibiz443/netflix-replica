@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
   def index
-    @pagy, @movies = pagy(MovieService.new.fetch_movies.order('created_at ASC'), items: 6)
+    @pagy_a, @movies = pagy_array(MovieService.new.fetch_movies, items: 6)
   end
 end
