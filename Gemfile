@@ -30,3 +30,5 @@ end
 
 gem 'inline_svg'
 gem "faraday"
+gem 'pagy', '~> 6.0'
+gem 'simple_form'
