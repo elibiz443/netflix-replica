@@ -1,27 +1,9 @@
 <!-- Card Blog -->
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <%# render "shared/alert" %>
   <!-- Grid -->
   <div class="grid lg:grid-cols-3 gap-6">
-    <% @movies.each do |movie| %>
-      <!-- Card -->
-      <a class="group relative block" href="#">
-        <div class="flex-shrink-0 relative w-full rounded-xl overflow-hidden w-full h-[350px] before:absolute before:inset-x-0 before:w-full before:h-full before:bg-gradient-to-t before:from-gray-900/[.7] before:z-[1]">
-          <img class="w-full h-full absolute top-0 left-0 object-cover" src="https://images.unsplash.com/photo-1669828230990-9b8583a877ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1062&q=80" alt="Image Description">
-        </div>
-
-        <div class="absolute bottom-0 inset-x-0 z-10">
-          <div class="flex flex-col h-full p-4 sm:p-6">
-            <h3 class="text-lg sm:text-3xl font-semibold text-white group-hover:text-white/[.8]">
-              <%= movie["title"] %>
-            </h3>
-            <p class="mt-2 text-white/[.8]">
-              <%= movie["description"] %>
-            </p>
-          </div>
-        </div>
-      </a>
-      <!-- End Card -->
-    <% end %>
+    <%= render "results" %>
   </div>
   <%== render partial: 'shared/pagy', locals: {pagy: @pagy_a} %>
   <!-- End Grid -->

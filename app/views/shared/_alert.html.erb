@@ -1,0 +1,5 @@
+<div class="w-1/2 mx-auto mt-2 mb-4 text-center">
+  <% flash.each do |type, msg| %>
+    <%= content_tag :div, msg, class: build_alert_classes(type) %>
+  <% end %>
+</div>
